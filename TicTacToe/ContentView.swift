@@ -8,6 +8,21 @@ struct ContentView: View
     {
         let borderSize = CGFloat(10)
         
+        
+        Text(gameState.turnText())
+            .font(.title)
+            .bold()
+            .padding()
+//            Spacer()
+        
+        
+        Text(String(format: "Crosses: %d", gameState.crossesScore))
+            .font(.title)
+            .bold()
+            .padding()
+            .foregroundColor(.orange)
+
+        
         VStack(spacing: borderSize)
         {
             ForEach(0...2, id: \.self)
@@ -22,11 +37,11 @@ struct ContentView: View
                         let cell = gameState.board[row][column]
                         
                         Text(cell.displayTile())
-                            .font(.system(size:60))
+                            .font(.system(size: 60))
                             .foregroundColor(cell.tileColor())
-                            .bold()
+                            .bold() 
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(1, contentMode: .fit)
                             .background(Color.white)
                             .onTapGesture {
                                 gameState.placeTile(row, column)
@@ -37,6 +52,23 @@ struct ContentView: View
         }
         .background(Color.black)
         .padding(40)
+        .alert(isPresented: $gameState.showAlert)
+        {
+            Alert(
+                title: Text(gameState.alertMessage),
+                  dismissButton: .default(Text("Allright!"))
+                  {
+                gameState.resetBoard()
+            }
+            )
+        }
+        
+        Text(String(format: "Noughts: %d", gameState.noughtsScore))
+            .font(.title)
+            .bold()
+            .padding()
+            .foregroundColor(.blue)
+           
     }
 }
 
@@ -45,3 +77,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F84B338029A1648200FD13AB /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84B337F29A1648200FD13AB /* Cell.swift */; };
+		F81CBE4B29ABC85C007BCEBA /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81CBE4A29ABC85C007BCEBA /* Cell.swift */; };
 		F84B338129A1656300FD13AB /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8900D7A29A0FD6900CEB635 /* GameState.swift */; };
 		F8F7D4C4299A0E4D0011106A /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7D4C3299A0E4D0011106A /* TicTacToeApp.swift */; };
 		F8F7D4C6299A0E4D0011106A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F7D4C5299A0E4D0011106A /* ContentView.swift */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F84B337F29A1648200FD13AB /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		F81CBE4A29ABC85C007BCEBA /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F8900D7A29A0FD6900CEB635 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		F8F7D4C0299A0E4D0011106A /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F7D4C3299A0E4D0011106A /* TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeApp.swift; sourceTree = "<group>"; };
@@ -56,9 +56,9 @@
 		F8F7D4C2299A0E4D0011106A /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				F84B337F29A1648200FD13AB /* Cell.swift */,
 				F8F7D4C3299A0E4D0011106A /* TicTacToeApp.swift */,
 				F8F7D4C5299A0E4D0011106A /* ContentView.swift */,
+				F81CBE4A29ABC85C007BCEBA /* Cell.swift */,
 				F8900D7A29A0FD6900CEB635 /* GameState.swift */,
 				F8F7D4C7299A0E4E0011106A /* Assets.xcassets */,
 				F8F7D4C9299A0E4E0011106A /* TicTacToe.entitlements */,
@@ -103,7 +103,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					F8F7D4BF299A0E4D0011106A = {
 						CreatedOnToolsVersion = 14.1;
@@ -146,8 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8F7D4C6299A0E4D0011106A /* ContentView.swift in Sources */,
+				F81CBE4B29ABC85C007BCEBA /* Cell.swift in Sources */,
 				F84B338129A1656300FD13AB /* GameState.swift in Sources */,
-				F84B338029A1648200FD13AB /* Cell.swift in Sources */,
 				F8F7D4C4299A0E4D0011106A /* TicTacToeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +188,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -246,6 +247,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -270,8 +272,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TicTacToe/TicTacToe.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Preview Content\"";
 				DEVELOPMENT_TEAM = L2Z9M7D6Y3;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -292,8 +296,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = beardmikle.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = beardmikle.tictactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -308,8 +313,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TicTacToe/TicTacToe.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Preview Content\"";
 				DEVELOPMENT_TEAM = L2Z9M7D6Y3;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -330,8 +337,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = beardmikle.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = beardmikle.tictactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
